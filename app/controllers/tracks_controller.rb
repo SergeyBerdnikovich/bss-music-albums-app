@@ -25,7 +25,7 @@ class TracksController < ApplicationController
   # GET /tracks/new.json
   def new
     @track = Track.new
-
+    
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @track }
@@ -40,11 +40,12 @@ class TracksController < ApplicationController
   # POST /tracks
   # POST /tracks.json
   def create
+    @music_album = MusicAlbum.find(params[:music_album_id])
     @track = Track.new(params[:track])
-
+    @music_album.tracks << @track
     respond_to do |format|
       if @track.save
-        format.html { redirect_to @track, notice: 'Track was successfully created.' }
+        format.html { redirect_to music_album_path(@music_album.id), notice: 'Track was successfully created.' }
         format.json { render json: @track, status: :created, location: @track }
       else
         format.html { render action: "new" }
@@ -76,7 +77,7 @@ class TracksController < ApplicationController
     @track.destroy
 
     respond_to do |format|
-      format.html { redirect_to tracks_url }
+      format.html { redirect_to music_album_path(@track.music_album_id) }
       format.json { head :no_content }
     end
   end

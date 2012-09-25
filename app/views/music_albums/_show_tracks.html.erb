@@ -1,0 +1,18 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Year</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tracks_for_album.each do |trfa| %>
+  <tr>
+    <td><%= trfa.name %></td>
+    <td><%= trfa.duration %></td>
+    <td><%= link_to 'Show', music_album_track_path(trfa.music_album_id,trfa.id) %></td>
+    <td><%= link_to 'Destroy', music_album_track_path(@music_album, trfa), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>

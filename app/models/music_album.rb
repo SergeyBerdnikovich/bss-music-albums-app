@@ -1,5 +1,5 @@
 class MusicAlbum < ActiveRecord::Base
-  has_many :tracks 
+  has_many :tracks, dependent: :destroy 
   attr_accessible :name, :year
 
   validates :name, presence: true

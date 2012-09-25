@@ -14,7 +14,7 @@
   <tr>
     <td><%= track.name %></td>
     <td><%= track.duration %></td>
-    <td><%= track.music_album %></td>
+    <td><%= track.music_album.id %></td>
     <td><%= link_to 'Show', track %></td>
     <td><%= link_to 'Edit', edit_track_path(track) %></td>
     <td><%= link_to 'Destroy', track, method: :delete, data: { confirm: 'Are you sure?' } %></td>

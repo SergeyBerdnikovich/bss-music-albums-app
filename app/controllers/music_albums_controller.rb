@@ -14,7 +14,7 @@ class MusicAlbumsController < ApplicationController
   # GET /music_albums/1.json
   def show
     @music_album = MusicAlbum.find(params[:id])
-
+    @tracks_for_album = Track.get_tracks_for_album(@music_album.id)
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @music_album }
