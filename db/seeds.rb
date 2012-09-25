@@ -6,19 +6,22 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-music_albums = MusicAlbum.create([
-  { :id => 1, :name => "aaaa", :year => "1234" },
-  { :id => 2, :name => "bbbb", :year => "4221" },
-  { :id => 3, :name => "ccb", :year => "4111" },
-  { :id => 4, :name => "bbrwerb", :year => "1991" }
-])
+music_albums1 = MusicAlbum.create( :name => "aaaa", :year => "1234" )
+	music_albums1.tracks = 	create(:name => "aaaa", :duration => "312")
+	music_albums1.tracks = 	create(:name => "bbbb", :duration => "3214")
+	music_albums1.tracks = 	create(:name => "bbgdfgdf", :duration => "3488")
+	music_albums1.tracks = 	create(:name => "lll123kk", :duration => "232",)
 
-tracks = Track.create([
-  { :id => 1, :name => "aaaa", :duration => "312", :music_album_id => 1 },
-  { :id => 2, :name => "bbbb", :duration => "3214", :music_album_id => 1 },
-  { :id => 3, :name => "fdzasasfb", :duration => "551", :music_album_id => 2 },
-  { :id => 4, :name => "bbgdfgdf", :duration => "3488", :music_album_id => 3 },
-  { :id => 5, :name => "fsdfsd78sd", :duration => "3257", :music_album_id => 3 },
-  { :id => 6, :name => "bgdfg88", :duration => "112", :music_album_id => 3 },
-  { :id => 7, :name => "lll123kk", :duration => "232", :music_album_id => 4 }
-])
+music_albums2 = MusicAlbum.create( :name => "fsdfds", :year => "1999" )
+	music_albums2.tracks = 	create(:name => "gsg", :duration => "312")
+	music_albums2.tracks = 	create(:name => "asasd", :duration => "232")
+	music_albums2.tracks = 	create(:name => "hjgfhgf", :duration => "1234")
+	music_albums2.tracks = 	create(:name => "asd", :duration => "33",)
+
+music_albums3 = MusicAlbum.create( :name => "jfghj", :year => "5551" )
+	music_albums3.tracks = 	create(:name => "hdfhdf", :duration => "223")
+	music_albums3.tracks = 	create(:name => "aaas", :duration => "44")
+	music_albums3.tracks = 	create(:name => "ssdsd", :duration => "545")
+	music_albums3.tracks = 	create(:name => "lll1ff23kk", :duration => "123",)
+	music_albums3.tracks = 	create(:name => "gdfgd", :duration => "223")
+	music_albums3.tracks = 	create(:name => "13edasd", :duration => "4214",)
