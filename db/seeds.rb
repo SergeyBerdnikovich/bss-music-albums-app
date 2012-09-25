@@ -14,11 +14,11 @@ music_albums = MusicAlbum.create([
 ])
 
 tracks = Track.create([
-  { :id => 1, :name => "aaaa", :duration => "312", :music_albums_id => 1 },
-  { :id => 2, :name => "bbbb", :duration => "3214", :music_albums_id => 1 },
-  { :id => 3, :name => "fdzasasfb", :duration => "551", :music_albums_id => 2 },
-  { :id => 4, :name => "bbgdfgdf", :duration => "3488", :music_albums_id => 3 },
-  { :id => 5, :name => "fsdfsd78sd", :duration => "3257", :music_albums_id => 3 },
-  { :id => 6, :name => "bgdfg88", :duration => "112", :music_albums_id => 3 },
-  { :id => 7, :name => "lll123kk", :duration => "232", :music_albums_id => 4 }
+  { :id => 1, :name => "aaaa", :duration => "312", :music_album_id => 1 },
+  { :id => 2, :name => "bbbb", :duration => "3214", :music_album_id => 1 },
+  { :id => 3, :name => "fdzasasfb", :duration => "551", :music_album_id => 2 },
+  { :id => 4, :name => "bbgdfgdf", :duration => "3488", :music_album_id => 3 },
+  { :id => 5, :name => "fsdfsd78sd", :duration => "3257", :music_album_id => 3 },
+  { :id => 6, :name => "bgdfg88", :duration => "112", :music_album_id => 3 },
+  { :id => 7, :name => "lll123kk", :duration => "232", :music_album_id => 4 }
 ])
