@@ -75,7 +75,7 @@ class TracksController < ApplicationController
   def destroy
     @track = Track.find(params[:id])
     @track.destroy
-
+    flash[:destroy] = "Destroy!!!"
     respond_to do |format|
       format.html { redirect_to music_album_path(@track.music_album_id) }
       format.json { head :no_content }
